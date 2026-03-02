@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beverage Recommender Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/demo/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+    <div class="bg-grid"></div>
+
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Demo Console</p>
+        <h1>Beverage Recommendation Service</h1>
+        <p class="subtitle">
+          Query understanding, ranking, and explainability in one interface.
+        </p>
+        <div class="status-row">
+          <span id="serviceBadge" class="badge neutral">Checking service...</span>
+          <span id="presetBadge" class="badge neutral">Preset: -</span>
+        </div>
+      </header>
+
+      <section class="layout">
+        <aside class="panel control-panel fade-in-up">
+          <h2>Request</h2>
+
+          <label class="field">
+            <span>Query Text</span>
+            <textarea
+              id="queryInput"
+              rows="4"
+              placeholder="Try: vegan iced espresso under 15g sugar"
+            ></textarea>
+          </label>
+
+          <div class="quick-queries" id="quickQueries"></div>
+
+          <div class="field-row">
+            <label class="field compact">
+              <span>Top K</span>
+              <input id="topKInput" type="number" min="1" max="25" value="10" />
+            </label>
+            <label class="field compact">
+              <span>Explain Top N</span>
+              <input id="explainTopNInput" type="number" min="1" max="10" value="3" />
+            </label>
+          </div>
+
+          <label class="toggle">
+            <input id="explainToggle" type="checkbox" checked />
+            <span>Include explanations</span>
+          </label>
+
+          <div class="button-row">
+            <button id="recommendBtn" class="btn primary">Run Recommendation</button>
+            <button id="resetBtn" class="btn ghost">Reset</button>
+          </div>
+
+          <p id="requestHint" class="hint">
+            Send one query to <code>/v1/recommend</code> and inspect structured output.
+          </p>
+        </aside>
+
+        <section class="panel result-panel fade-in-up delayed">
+          <div class="panel-header">
+            <h2>Response</h2>
+            <span id="latencyLabel" class="metric">Latency: -</span>
+          </div>
+
+          <div id="emptyState" class="empty-state">
+            <p>No request yet. Submit a query to view ranked recommendations.</p>
+          </div>
+
+          <div id="resultBody" class="result-body hidden">
+            <div class="result-meta">
+              <div class="meta-card">
+                <p class="meta-label">Candidates</p>
+                <p id="candidateCount" class="meta-value">-</p>
+              </div>
+              <div class="meta-card">
+                <p class="meta-label">Returned</p>
+                <p id="returnedCount" class="meta-value">-</p>
+              </div>
+            </div>
+
+            <div class="constraints-block">
+              <h3>Extracted Constraints</h3>
+              <pre id="constraintsJson" class="json-box"></pre>
+            </div>
+
+            <div>
+              <h3>Ranked Products</h3>
+              <ul id="recommendationList" class="recommendation-list"></ul>
+            </div>
+
+            <details class="json-details">
+              <summary>Raw JSON Response</summary>
+              <pre id="rawJson" class="json-box"></pre>
+            </details>
+          </div>
+
+          <p id="errorBox" class="error hidden"></p>
+        </section>
+      </section>
+    </main>
+
+    <script src="/demo/app.js" defer></script>
+  </body>
+</html>

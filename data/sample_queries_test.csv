@@ -1,0 +1,11 @@
+query_id,query_text,constraint_max_price,constraint_temperature,constraint_max_calories,constraint_max_sugar,constraint_dairy_free,constraint_vegan,constraint_caffeine_level,relevant_products,constraint_category
+SAMPLE_TEST_001,need a vegan iced espresso drink with low sugar,,,,,,,,,
+SAMPLE_TEST_002,hot brewed coffee with strong caffeine under $4.0,,,,,,,,,
+SAMPLE_TEST_003,caffeine free herbal tea without milk,,,,,,,,,
+SAMPLE_TEST_004,cold brew with no dairy and lots of caffeine,,,,,,,,,
+SAMPLE_TEST_005,fruity refresher under 25g sugar,,,,,,,,,
+SAMPLE_TEST_006,blended drink with no caffeine,,,,,,,,,
+SAMPLE_TEST_007,green tea iced and cheap,,,,,,,,,
+SAMPLE_TEST_008,hot latte that is plant based,,,,,,,,,
+SAMPLE_TEST_009,espresso under 100 calories and under $5.0,,,,,,,,,
+SAMPLE_TEST_010,tea under 200 calories and vegan,,,,,,,,,

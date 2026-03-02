@@ -1,0 +1,30 @@
+{
+  "description": "Baseline suite for offline and online-ready presets",
+  "base_env": {
+    "WRITE_EXPLANATIONS": "false"
+  },
+  "commands": [
+    "evaluate"
+  ],
+  "experiments": [
+    {
+      "name": "offline_baseline",
+      "env": {
+        "MODEL_PRESET": "offline",
+        "FORCE_OFFLINE_MODE": "true"
+      }
+    },
+    {
+      "name": "fast_preset",
+      "env": {
+        "MODEL_PRESET": "fast"
+      }
+    },
+    {
+      "name": "balanced_preset",
+      "env": {
+        "MODEL_PRESET": "balanced"
+      }
+    }
+  ]
+}

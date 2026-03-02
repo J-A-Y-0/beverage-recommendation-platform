@@ -1,0 +1,13 @@
+query_id,query_text,constraint_temperature,constraint_max_calories,constraint_max_sugar,constraint_dairy_free,constraint_vegan,constraint_caffeine_level,relevant_products,constraint_max_price,constraint_category
+SAMPLE_TRAIN_001,need hot black coffee with high caffeine and low sugar,hot,,10.0,True,True,high,"['PUB_BRW_001']",4.5,brewed
+SAMPLE_TRAIN_002,cold brew under $5 with no dairy,,200.0,,True,True,,"['PUB_CBR_001']",5.0,cold_brew
+SAMPLE_TRAIN_003,iced espresso drink with less than 15g sugar,iced,,15.0,,,,"['PUB_ICE_001', 'PUB_ICE_002', 'PUB_ICE_004']",6.0,espresso
+SAMPLE_TRAIN_004,give me a vegan hot latte under 220 calories,hot,220.0,,True,True,,"['PUB_ESP_003', 'PUB_TEA_005']",6.0,espresso
+SAMPLE_TRAIN_005,i want caffeine free tea without milk and cheap,hot,,10.0,True,True,none,"['PUB_TEA_002']",4.0,tea
+SAMPLE_TRAIN_006,fruit refresher under 25 grams sugar and dairy free,,200.0,25.0,True,True,,"['PUB_REF_001', 'PUB_REF_002']",5.0,refresher
+SAMPLE_TRAIN_007,need an affordable americano,hot,,,,,,"['PUB_ESP_001', 'PUB_ESP_006']",4.5,espresso
+SAMPLE_TRAIN_008,looking for medium caffeine green tea,hot,,,,,medium,"['PUB_TEA_003', 'PUB_TEA_005']",6.0,tea
+SAMPLE_TRAIN_009,blended drink with no caffeine under 400 calories,blended,400.0,,,,none,"['PUB_FRP_003']",6.0,frappuccino
+SAMPLE_TRAIN_010,iced non-dairy latte with regular caffeine and low sugar,iced,,12.0,True,True,medium,"['PUB_ICE_002']",6.0,espresso
+SAMPLE_TRAIN_011,high caffeine cold brew no milk no sugar,iced,,5.0,True,True,high,"['PUB_CBR_002', 'PUB_CBR_001']",6.0,cold_brew
+SAMPLE_TRAIN_012,hot tea that is vegan under 30 sugar and under $6,hot,,30.0,True,True,,"['PUB_TEA_001', 'PUB_TEA_002', 'PUB_TEA_003', 'PUB_TEA_005']",6.0,tea
