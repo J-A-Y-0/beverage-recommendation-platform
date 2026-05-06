@@ -1,4 +1,4 @@
-# Beverage Recommendation Platform
+# LLM-Powered Beverage Recommendation Engine
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Mode](https://img.shields.io/badge/mode-online%20%2F%20offline-success)
