@@ -233,3 +233,7 @@ project_root/
 ├── requirements.txt
 └── README.md
 ```
+
+---
+
+By [Jay Yu](https://jayyu.me/) · [Case study](https://jayyu.me/work/beverage-recommender/)
